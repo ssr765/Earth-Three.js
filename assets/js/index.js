@@ -1,11 +1,13 @@
 import * as THREE from "three";
+import earth from "../img/earth.jpg";
+import space from "../img/space.webp";
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 // Textures.
-const texture = new THREE.TextureLoader().load("/assets/img/earth.jpg");
-const bgTexture = new THREE.TextureLoader().load("/assets/img/space.webp");
+const texture = new THREE.TextureLoader().load(earth);
+const bgTexture = new THREE.TextureLoader().load(space);
 scene.background = bgTexture;
 scene.backgroundIntensity = 0.05;
 
